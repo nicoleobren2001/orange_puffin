@@ -16,9 +16,9 @@ num_penguins <- ggplot(penguins, aes(x = island, fill = species)) +
 num_penguins
 
 ## Scatterplot: penguin flipper length versus body mass
-plot2 <- ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+scatterplot_penguins <- ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point(aes(color = species, 
                  shape = species),
              size = 2) +
   scale_color_manual(values = c("darkorange","darkorchid","cyan4")) 
-plot2
+scatterplot_penguins
