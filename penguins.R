@@ -22,3 +22,10 @@ scatterplot_penguins <- ggplot(data = penguins, aes(x = flipper_length_mm, y = b
              size = 2) +
   scale_color_manual(values = c("darkorange","darkorchid","cyan4")) 
 scatterplot_penguins
+
+## fun plot
+penguins %>%
+  select(species, body_mass_g, ends_with("_mm")) %>% 
+  GGally::ggpairs(aes(color = species)) +
+  scale_colour_manual(values = c("darkorange","purple","cyan4")) +
+  scale_fill_manual(values = c("darkorange","purple","cyan4"))
